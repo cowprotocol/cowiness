@@ -13,7 +13,7 @@ Take this example:
 
 ![image](https://user-images.githubusercontent.com/624308/192264653-a22832c2-1113-4933-af12-bdb6342c20ff.png)
 
-3. For every path from its sell token (USDC) to its buy token (WETH) (there is just one in this example), compute the total fraction of volume flowing  on this path, which can be obtained by multiplying the percent of volume attached to every crossed outgoing edge. In this example is 100%.
+3. For every path from its sell token (USDC) to its buy token (WETH) (there is just one in this example), compute the total fraction of volume flowing  on this path, which can be obtained by multiplying the fraction of volume attached to every crossed outgoing edge. In this example is 100%.
 
 4. If that path crosses another user order, then accumulate that value. Return the sum of these values for all paths.
 
