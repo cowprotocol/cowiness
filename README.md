@@ -26,8 +26,8 @@ and the total fraction of volume that crosses another user order is 31%.
 # Install
 
 ```bash
-pip -m venv venv
-venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -40,11 +40,6 @@ ORDERBOOK_URL=https://api.cow.fi/mainnet
 WEB3_URL=https://mainnet.infura.io/v3/...
 ```
 
-Activate virtualenv
-
-```bash
-venv/bin/activate
-```
 
 Run:
 
