@@ -52,6 +52,10 @@ Run:
 python -m src.cowiness 0xa797e6ca3952ff7bf4cbd4f465f1e49a2b2c1e8d12d1db3980fa87adbed4ff7c
 ```
 
+# Limitations
+
+* If transactions are internalized they leave no trace on the blockchain and this code will not work. 
+
 # Examples
 
 ```bash
