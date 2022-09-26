@@ -6,6 +6,22 @@ This repo contains code to compute, for every order in a settlement, the percent
 
 Take this example:
 
+![image](https://user-images.githubusercontent.com/624308/192263717-646562a0-3d0a-43ce-9b19-7ad5d9461443.png)
+
+1. Select a user order (0xceda), and compute all paths from its sell token (USDC) to its buy token (WETH). The union of the edges in these paths is the order's residual graph. 
+2. For every node in the residual graph, compute the percent of volume going out of its outgoing edges (in red):
+
+![image](https://user-images.githubusercontent.com/624308/192264653-a22832c2-1113-4933-af12-bdb6342c20ff.png)
+
+3. For every path from its sell token (USDC) to its buy token (WETH) (there is just one in this example), compute the total fraction of volume flowing  on this path, which can be obtained by multiplying the percent of volume attached to every crossed outgoing edge. In this example is 100%.
+
+4. If that path crosses another user order, then accumulate that value. Return the sum of these values for all paths.
+
+For the second order, 0x2041, the residual graph is
+
+![image](https://user-images.githubusercontent.com/624308/192265346-ebda3253-6254-4d9c-b6a6-fd1f1faf6fa1.png)
+
+and the total fraction of volume that crosses another user order is 31%.
 
 # Install
 
